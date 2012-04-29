@@ -1,0 +1,7 @@
+# Shortcut commands and functions with arguments
+
+# `ea` to edit aliases file and reload it on save
+alias reload="source ~/bin/dotfiles/bash/aliases"
+alias ea="vim ~/bin/dotfiles/bash/aliases && reload"
+
+alias cdgemdir="cd .rvm/gems/jruby-head/gems"

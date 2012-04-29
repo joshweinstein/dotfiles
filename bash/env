@@ -1,0 +1,23 @@
+# Values used by other scripts and applications; e.g. EDITOR and PATH
+export PATH=~/bin:~/bin/dotfiles/bin:$PATH
+export EDITOR="vim"
+
+export JAVA_OPTS="-d32 -client"
+export JRUBY_OPTS="--1.9" #adding --ng-server with --1.9 causes problems
+
+#
+# RVM
+#
+# Load RVM function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# Convenience function for switching to gemdir of specific Ruby
+function gemdir {
+  if [[ -z "$1" ]] ; then
+    echo "gemdir expects a parameter, which should be a valid RVM Ruby selector"
+  else
+    rvm "$1"
+    cd $(rvm gemdir)
+    pwd
+  fi
+}
