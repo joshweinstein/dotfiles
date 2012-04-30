@@ -38,6 +38,15 @@ set list!
 " Shortcut to rapidly toggle `set list`, which toggles invisible characters
 nmap <leader>l :set list!<CR>
 
+""
+"" Searching
+""
+
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive...
+set smartcase   " ... unless they contain at least one capital letter
+
 "Textmate indentation shortcuts
 nmap <D-[> <<
 nmap <D-]> >>
