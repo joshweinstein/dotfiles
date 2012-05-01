@@ -207,6 +207,9 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 " Disable temp and backup files
 set wildignore+=*.swp,*~,._*
 
+" Ignore jasmine-headless-webkit cache
+set wildignore+=.jhw-cache
+
 ""
 "" Backup and swap files
 ""
