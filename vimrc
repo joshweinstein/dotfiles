@@ -127,12 +127,15 @@ map <leader>gm :CtrlP app/models<cr>
 map <leader>gc :CtrlP app/controllers<cr>
 map <leader>gr :CtrlP app/repositories<cr>
 map <leader>ge :CtrlP app/serializers<cr>
-map <leader>gv :CtrlP app/validators<cr>
+map <leader>gl :CtrlP app/validators<cr>
+map <leader>gv :CtrlP app/views<cr>
 map <leader>ga :CtrlP app/argmaps<cr>
 map <leader>gs :CtrlP spec<cr>
 map <leader>gj :CtrlP public/javascripts<cr>
 map <leader>gjm :CtrlP public/javascripts/models<cr>
+map <leader>gjc :CtrlP public/javascripts/collections<cr>
 map <leader>gjv :CtrlP public/javascripts/views<cr>
+map <leader>gjt :CtrlP public/javascripts/templates<cr>
 map <leader>gjs :CtrlP spec/javascripts/spec<cr>
 
 "
