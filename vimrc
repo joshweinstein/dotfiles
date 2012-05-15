@@ -129,6 +129,7 @@ map <leader>gr :CtrlP app/repositories<cr>
 map <leader>ge :CtrlP app/serializers<cr>
 map <leader>gl :CtrlP app/validators<cr>
 map <leader>gv :CtrlP app/views<cr>
+map <leader>gy :CtrlP app/assets/stylesheets<cr>
 map <leader>ga :CtrlP app/argmaps<cr>
 map <leader>gs :CtrlP spec<cr>
 map <leader>gj :CtrlP public/javascripts<cr>
