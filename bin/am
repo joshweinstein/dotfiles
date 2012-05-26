@@ -9,6 +9,8 @@ if ! $(tmux has-session -t ArgMaps); then
     tmux send-keys -t ArgMaps:0 "export JRUBY_OPTS='-X+O'; export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home" C-m
     tmux send-keys -t ArgMaps:0 "testdrb -Ispec spec/models/evidences_relationship_spec.rb"
     tmux split-window -h -p 25
+    tmux send-keys -t ArgMaps:0 "export JRUBY_OPTS='-X+O'; export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home; bundle exec guard" C-m
+    tmux split-window -h -p 25
     tmux send-keys -t ArgMaps:0 "export JRUBY_OPTS='-X+O'; export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home; spork" C-m
 
     # tmux new-window -n Server
