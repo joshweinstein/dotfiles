@@ -4,4 +4,4 @@
 alias reload="source ~/bin/dotfiles/bash/aliases"
 alias ea="vim ~/bin/dotfiles/bash/aliases && reload"
 
-alias cdgemdir="cd .rvm/gems/jruby-head/gems"
+alias cdgemdir="cd ~/.rvm/gems/jruby-head/gems"
