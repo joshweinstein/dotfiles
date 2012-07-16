@@ -1,0 +1,29 @@
+Host plato
+    HostName 50.116.61.122
+    User root
+    Port 22
+
+Host aristotle
+    HostName 66.175.213.78
+    User root
+    Port 22
+
+Host euclid
+    HostName 50.116.61.203
+    User root
+    Port 22
+
+Host descartes
+    HostName 50.116.56.154
+    User root
+    Port 22
+
+Host puppet
+    HostName 50.116.56.154
+    User root
+    Port 22
+
+Host archimedes
+    HostName 66.175.210.54
+    User root
+    Port 22
