@@ -132,11 +132,11 @@ map <leader>gv :CtrlP app/views<cr>
 map <leader>gy :CtrlP app/assets/stylesheets<cr>
 map <leader>ga :CtrlP app/argmaps<cr>
 map <leader>gs :CtrlP spec<cr>
-map <leader>gj :CtrlP public/javascripts<cr>
-map <leader>gjm :CtrlP public/javascripts/models<cr>
-map <leader>gjc :CtrlP public/javascripts/collections<cr>
-map <leader>gjv :CtrlP public/javascripts/views<cr>
-map <leader>gjt :CtrlP public/javascripts/templates<cr>
+map <leader>gj :CtrlP app/assets/javascripts<cr>
+map <leader>gjm :CtrlP app/assets/javascripts/models<cr>
+map <leader>gjc :CtrlP app/assets/javascripts/collections<cr>
+map <leader>gjv :CtrlP app/assets/javascripts/views<cr>
+map <leader>gjt :CtrlP app/assets/javascripts/templates<cr>
 map <leader>gjs :CtrlP spec/javascripts/spec<cr>
 
 "
