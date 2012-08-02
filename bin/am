@@ -4,7 +4,7 @@
 if ! $(tmux has-session -t ArgMaps); then
     cd argmaps
     tmux new-session -d -s ArgMaps -n main
-    tmux send-keys -t ArgMaps:0 "bundle exec trinidad" C-m
+    tmux send-keys -t ArgMaps:0 'export JAVA_OPTS= && bundle exec torquebox run -J="\-Xmx1024m \-Xms256m \-server"' C-m
     tmux split-window -v -p 25
     tmux send-keys -t ArgMaps:0 "export JRUBY_OPTS='-X+O'; export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home" C-m
     tmux send-keys -t ArgMaps:0 "testdrb -Ispec spec/models/evidences_relationship_spec.rb"
