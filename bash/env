@@ -1,5 +1,5 @@
 # Values used by other scripts and applications; e.g. EDITOR and PATH
-export PATH=~/bin:~/bin/dotfiles/bin:$PATH
+export PATH=~/bin:~/bin/dotfiles/bin:/usr/local/sbin:$PATH
 export EDITOR="vim"
 
 export JAVA_OPTS="-d32 -client"
