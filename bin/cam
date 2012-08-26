@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# If there isn't an ArgMaps session running in tmux, set one up.
+if ! $(tmux has-session -t ArgMaps); then
+    cd argmaps
+    tmux new-session -d -s ArgMaps -n main
+    tmux send-keys -t ArgMaps:0 'rails s' C-m
+    tmux split-window -v -p 25
+    tmux send-keys -t ArgMaps:0 "testdrb -Ispec spec/models/evidences_relationship_spec.rb"
+    tmux split-window -h -p 25
+    tmux send-keys -t ArgMaps:0 "bundle exec guard" C-m
+    tmux split-window -h -p 25
+    tmux send-keys -t ArgMaps:0 "bundle exec spork" C-m
+
+    tmux select-window -t 0
+    tmux select-pane -t 0
+fi
+
+# Now that there's definitely an ArgMaps session, attach to it.
+tmux attach-session -t ArgMaps
