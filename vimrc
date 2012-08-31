@@ -166,8 +166,7 @@ function! RunCurrentTest()
     let path_to_current_file = expand('%')
     let is_ruby_spec = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
     if is_ruby_spec
-      let test_env_setup = ":!export JRUBY_OPTS='-X+O'; export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home; "
-      exec test_env_setup . 'testdrb -Ispec ' . path_to_current_file
+      exec "!" . 'testdrb -Ispec ' . path_to_current_file
     else
       exec ':!jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
     end
