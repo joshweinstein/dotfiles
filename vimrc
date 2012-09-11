@@ -218,3 +218,11 @@ set wildignore+=.jhw-cache
 ""
 set backupdir=~/.vim/_backup//    " where to put backup files.
 set directory=~/.vim/_temp//      " where to put swap files.
+
+""
+"" Folding
+""
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
