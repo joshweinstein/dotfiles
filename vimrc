@@ -35,9 +35,6 @@ set list listchars=tab:▸\ ,eol:¬
 " Hide invisibles by default
 set list!
 
-" Shortcut to rapidly toggle `set list`, which toggles invisible characters
-nmap <leader>l :set list!<CR>
-
 ""
 "" Searching
 ""
@@ -191,13 +188,15 @@ set timeoutlen=50
 " Press S to replace word under cursor with last yanked or deleted text
 nnoremap S diw"0P"
 
-" Mapping for inserting a linebreak above the current line
-nmap <c-cr> k$a<cr><Esc>
-
+" Toggle invisible characters
+nmap <leader>l :set list!<cr>
 
 ""
 "" Wild settings
 ""
+" Enable wildmenu completion
+set wildmenu
+
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 
@@ -225,4 +224,4 @@ set directory=~/.vim/_temp//      " where to put swap files.
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
-set foldlevel=1         "this is just what i use
+set foldlevel=1
