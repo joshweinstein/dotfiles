@@ -194,9 +194,6 @@ nmap <leader>l :set list!<cr>
 ""
 "" Wild settings
 ""
-" Enable wildmenu completion
-set wildmenu
-
 " Disable output and VCS files
 set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem
 
