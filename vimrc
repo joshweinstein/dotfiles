@@ -165,7 +165,7 @@ function! RunCurrentTest()
     if is_ruby_spec
       exec "!" . 'testdrb -Ispec ' . path_to_current_file
     else
-      exec ':!jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
+      exec ':!bundle exec jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
     end
 endfunction
 map <leader>T :call RunCurrentTest()
