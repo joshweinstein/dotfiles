@@ -163,12 +163,15 @@ function! RunCurrentTest()
     let path_to_current_file = expand('%')
     let is_ruby_spec = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
     if is_ruby_spec
-      exec "!" . 'testdrb -Ispec ' . path_to_current_file
+      exec '!testdrb -Ispec ' . path_to_current_file
     else
-      exec ':!bundle exec jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
+      exec '!bundle exec jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
     end
 endfunction
 map <leader>T :call RunCurrentTest()
+
+" re-set shell so that the function above executes with rvm ruby, not system
+set shell=/bin/sh
 
 "
 " Colors
