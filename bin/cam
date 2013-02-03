@@ -6,13 +6,13 @@ if ! $(tmux has-session -t ArgMaps); then
     tmux new-session -d -s ArgMaps -n main
     tmux send-keys -t ArgMaps:0 "testdrb -Ispec spec/models/evidences_relationship_spec.rb"
     tmux split-window -h -p 50
-    tmux send-keys -t ArgMaps:0 'rails s' C-m
+    tmux send-keys -t ArgMaps:0 'zeus server' C-m
     tmux split-window -v -p 25
     tmux send-keys -t ArgMaps:0 "elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.19.0/config/elasticsearch.yml" C-m
     tmux split-window -h -p 25
     tmux send-keys -t ArgMaps:0 "bundle exec guard" C-m
     tmux split-window -h -p 25
-    tmux send-keys -t ArgMaps:0 "bundle exec spork" C-m
+    tmux send-keys -t ArgMaps:0 "zeus start" C-m
 
     tmux select-window -t 0
     tmux select-pane -t 0
