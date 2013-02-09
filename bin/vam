@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# If there isn't an ArgMapsVim session running in tmux, set one up.
+if ! $(tmux has-session -t ArgMapsVim); then
+    cd argmaps
+    tmux new-session -d -s ArgMapsVim -n main
+    tmux send-keys -t ArgMapsVim:0 "vim ." C-m
+    tmux split-window -v -p 10
+    tmux send-keys -t ArgMapsVim:0 'sh run-test.sh' C-m
+
+    tmux select-window -t 0
+    tmux select-pane -t 0
+fi
+
+# Now that there's definitely an ArgMapsVim session, attach to it.
+tmux attach-session -t ArgMapsVim
