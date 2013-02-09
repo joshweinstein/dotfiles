@@ -168,7 +168,20 @@ function! RunCurrentTest()
       exec '!bundle exec jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
     end
 endfunction
-map <leader>T :call RunCurrentTest()
+map <leader>T :call RunCurrentTest()<cr>
+
+function! RunCurrentTestAsync()
+    " Write test file, then execute it.
+    :w
+    let path_to_current_file = expand('%')
+    let is_ruby_spec = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
+    if is_ruby_spec
+      :!echo "zeus test %" > test-commands
+    else
+      :!echo "jasmine-headless-webkit -c --no-full-run %" > test-commands
+    end
+endfunction
+map <leader>t :call RunCurrentTestAsync()<cr><cr>
 
 " re-set shell so that the function above executes with rvm ruby, not system
 set shell=/bin/sh
