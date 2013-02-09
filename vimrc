@@ -165,7 +165,7 @@ function! RunCurrentTest()
     if is_ruby_spec
       exec '!zeus test ' . path_to_current_file
     else
-      exec '!bundle exec jasmine-headless-webkit -c --no-full-run ' . path_to_current_file
+      exec "!ruby spec/javascripts/support/compile_assets_and_run_test.rb %"
     end
 endfunction
 map <leader>T :call RunCurrentTest()<cr>
@@ -178,7 +178,7 @@ function! RunCurrentTestAsync()
     if is_ruby_spec
       :!echo "zeus test %" > test-commands
     else
-      :!echo "jasmine-headless-webkit -c --no-full-run %" > test-commands
+      :!echo "ruby spec/javascripts/support/compile_assets_and_run_test.rb %" > test-commands
     end
 endfunction
 map <leader>t :call RunCurrentTestAsync()<cr><cr>
