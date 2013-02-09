@@ -6,7 +6,7 @@ if ! $(tmux has-session -t ArgMapsVim); then
     tmux new-session -d -s ArgMapsVim -n main
     tmux send-keys -t ArgMapsVim:0 "vim ." C-m
     tmux split-window -v -p 10
-    tmux send-keys -t ArgMapsVim:0 'sh run-test.sh' C-m
+    tmux send-keys -t ArgMapsVim:0 'sh ~/bin/dotfiles/bin/run-test.sh' C-m
 
     tmux select-window -t 0
     tmux select-pane -t 0
