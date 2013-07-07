@@ -56,6 +56,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"Open vertical splits to the right
+set splitright
+
 ""
 "" File types
 ""
@@ -76,7 +79,7 @@ if has("autocmd")
   " Set the Ruby filetype for a number of common Ruby files without .rb
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
 
-  " Make sure all mardown files have the correct filetype set and setup wrapping
+  " Make sure all markdown files have the correct filetype set and setup wrapping
   au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
 
   " Treat JSON files like JavaScript
