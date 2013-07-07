@@ -95,6 +95,9 @@ if has("autocmd")
   " see :help last-position-jump
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g`\"" | endif
+
+  " Add spell checking and automatic wrapping at 72 columns to commit messages
+  autocmd Filetype gitcommit setlocal spell textwidth=72
 endif
 
 " Minitest syntax highlighting and i_CTRL-X_CTRL-U autocompletion
