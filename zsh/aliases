@@ -1,1 +1,2 @@
 source ~/bin/dotfiles/bash/aliases
+alias cap='nocorrect cap'
