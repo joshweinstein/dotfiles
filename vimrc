@@ -23,7 +23,6 @@ set nowrap                        " don't wrap lines
 set tabstop=4                     " a tab is two spaces
 set shiftwidth=4                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
-set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
 
 " Delete trailing whitespace on save
