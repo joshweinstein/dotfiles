@@ -39,6 +39,9 @@ source $ZSH/oh-my-zsh.sh
 # use vi mode
 bindkey -v
 
+# enter normal mode by typing 'jj'
+bindkey -M viins 'jj' vi-cmd-mode
+
 # Show elapsed time if command took more than X seconds
 REPORTTIME=10
 
