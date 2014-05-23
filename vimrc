@@ -106,12 +106,6 @@ set completefunc=syntaxcomplete#Complete
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-"
-" Ack
-"
-let g:ackprg="ack -H --nocolor --nogroup --column --ignore-dir=public/assets"
-
-
 " Map ,e and ,v to edit or view files in same directory as current file
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
