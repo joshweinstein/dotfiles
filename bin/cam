@@ -6,13 +6,19 @@ if ! $(tmux has-session -t ArgMaps); then
     tmux new-session -d -s ArgMaps -n main
     tmux send-keys -t ArgMaps:0 "ruby -Ispec spec/models/evidences_relationship_spec.rb"
     tmux split-window -h -p 50
-    tmux send-keys -t ArgMaps:0 'bundle exec foreman start --procfile Procfile.dev -p 7000' C-m
+    tmux send-keys -t ArgMaps:0 'tail -f log/development.log' C-m
     tmux split-window -v -p 25
-    tmux send-keys -t ArgMaps:0 "elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.19.0/config/elasticsearch.yml" C-m
+#    tmux send-keys -t ArgMaps:0 "elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.19.0/config/elasticsearch.yml" C-m
+    tmux split-window -h -p 25
+    tmux send-keys -t ArgMaps:0 'bundle exec foreman start --procfile Procfile.dev -p 7000' C-m
     tmux split-window -h -p 25
     tmux send-keys -t ArgMaps:0 "guard" C-m
     tmux split-window -h -p 25
     tmux send-keys -t ArgMaps:0 "zeus start" C-m
+#    cd ../argmaps-nlp
+#    tmux split-window -h -p 25
+#    tmux send-keys -t ArgMaps:0 'bundle exec foreman start -p 8000' C-m
+
 
     tmux select-window -t 0
     tmux select-pane -t 0
