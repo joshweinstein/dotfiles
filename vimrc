@@ -250,3 +250,6 @@ set foldlevel=1
 ""
 " Vim Gutter
 highlight clear SignColumn
+
+" JSHint
+let jshint2_save = 1
