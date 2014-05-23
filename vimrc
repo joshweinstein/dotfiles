@@ -248,6 +248,11 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  'public\/assets-test\|tmp'
     \}
 
+"
+" Ack.vim
+"
+let g:ackprg="ack -H --nocolor --nogroup --column --ignore-dir=public/assets"
+
 " Vim Gutter
 highlight clear SignColumn
 
