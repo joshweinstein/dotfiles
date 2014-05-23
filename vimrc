@@ -243,6 +243,11 @@ set foldlevel=1
 ""
 "" Plug-In Config
 ""
+" Ctrlp
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  'public\/assets-test\|tmp'
+    \}
+
 " Vim Gutter
 highlight clear SignColumn
 
