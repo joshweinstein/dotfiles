@@ -134,6 +134,7 @@ map <leader>gjm :CtrlP app/assets/javascripts/models<cr>
 map <leader>gjc :CtrlP app/assets/javascripts/collections<cr>
 map <leader>gjv :CtrlP app/assets/javascripts/views<cr>
 map <leader>gjt :CtrlP app/assets/javascripts/templates<cr>
+map <leader>gjd :CtrlP app/assets/javascripts/commands<cr>
 map <leader>gjs :CtrlP spec/javascripts/spec<cr>
 
 "
