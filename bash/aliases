@@ -4,5 +4,6 @@
 alias reload="source ~/bin/dotfiles/bash/aliases"
 alias ea="vim ~/bin/dotfiles/bash/aliases && reload"
 alias ri='ri -f ansi'
+alias vi='vim'
 
 alias cdgemdir="cd ~/.rvm/gems/ruby-2.0.0-p195/gems"
