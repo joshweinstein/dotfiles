@@ -4,9 +4,6 @@ let mapleader = ","
 " Use jj to switch to normal mode
 :inoremap jj <esc>
 
-" Use Pathogen to manage plugins
-call pathogen#infect()
-
 ""
 "" Basic Setup
 ""
@@ -99,9 +96,6 @@ if has("autocmd")
   " Add spell checking and automatic wrapping at 72 columns to commit messages
   autocmd Filetype gitcommit setlocal spell textwidth=72
 endif
-
-" Minitest syntax highlighting and i_CTRL-X_CTRL-U autocompletion
-set completefunc=syntaxcomplete#Complete
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
@@ -227,12 +221,6 @@ set wildignore+=*.swp,*~,._*
 set wildignore+=.jhw-cache
 
 ""
-"" Backup and swap files
-""
-set backupdir=~/.vim/_backup//    " where to put backup files.
-set directory=~/.vim/_temp//      " where to put swap files.
-
-""
 "" Folding
 ""
 set foldmethod=indent   "fold based on indent
@@ -251,10 +239,13 @@ let g:ctrlp_custom_ignore = {
 "
 " Ack.vim
 "
+" use vanilla ack
 let g:ackprg="ack -H --nocolor --nogroup --column --ignore-dir=public/assets"
+" ..unless we have access to ag (The Silver Searcher), which is an order of
+" magnitude faster
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 " Vim Gutter
 highlight clear SignColumn
-
-" JSHint
-let jshint2_save = 1
