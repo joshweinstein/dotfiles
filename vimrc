@@ -123,7 +123,7 @@ map <leader>gy :CtrlP app/assets/stylesheets<cr>
 map <leader>gs :CtrlP spec<cr>
 map <leader>gj :CtrlP app/assets/javascripts<cr>
 map <leader>gjm :CtrlP app/assets/javascripts/models<cr>
-map <leader>gjp :CtrlP app/assets/javascripts/web_components/polymer<cr>
+map <leader>gp :CtrlP app/assets/javascripts/web_components/polymer<cr>
 
 "
 " Functions
