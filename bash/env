@@ -3,9 +3,6 @@ export PATH=~/bin:~/bin/dotfiles/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 export EDITOR="vim"
 
-export JAVA_OPTS="-d32 -client"
-export JRUBY_OPTS="--1.9" #adding --ng-server with --1.9 causes problems
-
 export ACKRC=".ackrc"
 
 export HTTP_PROXY=http://proxy.bloomberg.com:81
