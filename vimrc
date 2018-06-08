@@ -243,3 +243,6 @@ endif
 
 " Vim Gutter
 highlight clear SignColumn
+
+" point Gbrowse to Bloomberg GH via vim-rhubarb
+let g:github_enterprise_urls = ['https://bbgithub.dev.bloomberg.com']
