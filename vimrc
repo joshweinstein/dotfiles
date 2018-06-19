@@ -226,9 +226,8 @@ set foldlevel=1
 "" Plug-In Config
 ""
 " Ctrlp
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  'public\/assets-test\|tmp'
-    \}
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
 "
 " Ack.vim
