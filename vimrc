@@ -228,6 +228,9 @@ set foldlevel=1
 " Ctrlp
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|tmp$'
+            \}
 
 "
 " Ack.vim
