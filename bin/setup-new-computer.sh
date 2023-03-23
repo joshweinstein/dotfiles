@@ -12,11 +12,12 @@ mkdir -p ~/.vim/_tmp
 mkdir -p ~/.vim/pack/plugins/start
 
 # install vim plugins
-git clone https://github.com/ctrlpvim/ctrlp.vim.git .vim/pack/plugins/start/
-git clone https://github.com/mileszs/ack.vim.git .vim/pack/plugins/start/
-git clone https://github.com/tpope/vim-fugitive.git .vim/pack/plugins/start/
-git clone https://github.com/airblade/vim-gitgutter.git .vim/pack/plugins/start/
-git clone https://github.com/tpope/vim-rhubarb.git .vim/pack/plugins/start/
+cd ~/.vim/pack/plugins/start
+git clone https://github.com/ctrlpvim/ctrlp.vim.git
+git clone https://github.com/mileszs/ack.vim.git
+git clone https://github.com/tpope/vim-fugitive.git
+git clone https://github.com/airblade/vim-gitgutter.git
+git clone https://github.com/tpope/vim-rhubarb.git
 
 # from ~/.vim, link in vim directories
 cd ~/.vim
