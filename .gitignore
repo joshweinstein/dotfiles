@@ -2,3 +2,8 @@ vim/_temp
 vim/_backup
 vim/.netrwhist
 vim/bundle/vim-smartinput/doc/tags
+vim/colors/colors
+vim/ftdetect/ftdetect
+vim/ftplugin/ftplugin
+vim/indent/indent
+vim/syntax/syntax

@@ -1,11 +1,29 @@
 # Values used by other scripts and applications; e.g. EDITOR and PATH
-export PATH=~/bin:~/bin/dotfiles/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH="$HOME/bin:$HOME/bin/dotfiles/bin:/usr/local/sbin:/usr/local/bin:$PATH"
 
 export EDITOR="vim"
 
 export ACKRC=".ackrc"
 
-export HTTP_PROXY=http://proxy.bloomberg.com:81
-export HTTPS_PROXY=http://proxy.bloomberg.com:81
+if [ -d "$HOME/.rbenv/shims" ]; then
+  export PATH="$HOME/.rbenv/shims:$PATH"
+fi
 
-eval "$(rbenv init -)"
+if [ -d "$HOME/.pyenv/shims" ]; then
+  export PATH="$HOME/.pyenv/shims:$PATH"
+fi
+
+rbenv() {
+  unset -f rbenv
+  eval "$(command rbenv init -)"
+  rbenv "$@"
+}
+
+pyenv() {
+  unset -f pyenv
+  eval "$(command pyenv init -)"
+  pyenv "$@"
+}
+
+# gh plugin w/ 1password
+source /Users/josh/.config/op/plugins.sh

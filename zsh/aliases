@@ -1,2 +1,2 @@
 source ~/bin/dotfiles/bash/aliases
-alias cap='nocorrect cap'
+alias sadi='/Users/josh/send_appreciation.py'
