@@ -67,6 +67,29 @@ function! s:setupWrapping()
   set nolist
 endfunction
 
+augroup text_wrapping
+  autocmd!
+  autocmd FileType text,markdown,gitcommit call SetupTextWrapping()
+augroup END
+
+function! SetupTextWrapping()
+  " Disable hard line breaks
+  setlocal textwidth=0
+  setlocal wrapmargin=0
+  setlocal formatoptions-=t
+
+  " Enable visual wrapping
+  setlocal wrap
+  setlocal linebreak
+  setlocal breakindent
+
+  " Move by screen lines when no count is given
+  nnoremap <buffer> <expr> j v:count == 0 ? 'gj' : 'j'
+  nnoremap <buffer> <expr> k v:count == 0 ? 'gk' : 'k'
+  vnoremap <buffer> <expr> j v:count == 0 ? 'gj' : 'j'
+  vnoremap <buffer> <expr> k v:count == 0 ? 'gk' : 'k'
+endfunction
+
 filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 
 if has("autocmd")
@@ -75,9 +98,6 @@ if has("autocmd")
 
   " Set the Ruby filetype for a number of common Ruby files without .rb
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
-
-  " Make sure all markdown files have the correct filetype set and setup wrapping
-  au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn,txt} setf markdown | call s:setupWrapping()
 
   " Treat JSON files like JavaScript
   au BufNewFile,BufRead *.json set ft=javascript
